@@ -1,0 +1,24 @@
+package org.example;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Main {
+    public static void main(String[] args) {
+        String str = "poiuytrewqlkjhgfdsamnbvcxz";
+
+
+      str.toUpperCase();
+
+        Set<Character> ch = new  TreeSet<Character>();
+        for (int i = 0; i < str.length(); i++) {
+            char ch1 = str.charAt(i);
+            ch.add(ch1);
+
+        }
+        System.out.println(ch);
+    }
+}
+//    Решите задачу: Расставьте в алфавитном порядке буквы. Разрешается использование техники Разделяй и властвуй. Полученные данные напечатайте.
+//👉👉👉  На вход строка: "poiuytrewqlkjhgfdsamnbvcxz"
+//На выходе должно быть: ABCDEFGHIJKLMNOPQRSTUVWXYZ (с большой буквы)
