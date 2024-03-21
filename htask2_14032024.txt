@@ -7,18 +7,20 @@ public class Main {
     public static void main(String[] args) {
         String str = "poiuytrewqlkjhgfdsamnbvcxz";
 
+        //System.out.println(str.toUpperCase());
 
-      str.toUpperCase();
-
+        String str1 = str.toUpperCase();
         Set<Character> ch = new  TreeSet<Character>();
-        for (int i = 0; i < str.length(); i++) {
-            char ch1 = str.charAt(i);
+        for (int i = 0; i < str1.length(); i++) {
+            char ch1 = str1.charAt(i);
             ch.add(ch1);
 
         }
-        System.out.println(ch);
+        StringBuilder sb = new StringBuilder();
+        for (Character element:ch){
+            sb = sb.append(element);
+
+        }
+        System.out.println(sb);
     }
 }
-//    Решите задачу: Расставьте в алфавитном порядке буквы. Разрешается использование техники Разделяй и властвуй. Полученные данные напечатайте.
-//👉👉👉  На вход строка: "poiuytrewqlkjhgfdsamnbvcxz"
-//На выходе должно быть: ABCDEFGHIJKLMNOPQRSTUVWXYZ (с большой буквы)
