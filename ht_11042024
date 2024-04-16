@@ -1,0 +1,29 @@
+package org.example.ht_11042024;
+
+import java.util.*;
+
+public class Simmetry {
+
+    public static void main(String[] args) {
+        Stack<String> stk = new Stack<>();
+        Queue<String> queue = new LinkedList<>();
+
+        List<String> list = Arrays.asList("aa", "hj", "df", "df", "hj", "aa");
+        int n = (int) list.size()/2;
+        if (n<1){
+            System.out.println("The list is symmetrical");
+        }
+        for (String unit:list){
+            stk.push(unit);
+            queue.add(unit);
+        }
+        for (int i = 0; i <n; i++) {
+            System.out.println("stk.peek()" +stk.peek());
+            System.out.println("queue.peek()" +queue.peek());
+            if (!stk.pop().equals(queue.poll()))
+            {   System.out.println("The list isn't symmetrical");
+                return;}
+        }
+            System.out.println("The list is perfectly symmetrical");
+    }
+}
